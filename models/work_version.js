@@ -1,12 +1,10 @@
 const mongoose=require('mongoose')
-const uniqueValidator=require('mongoose-unique-validator')
 
 let Schema=mongoose.Schema
 
 let workVersionSchema=new Schema({
     name:{
         type: String,
-        unique: true,
         required: [true, 'Name is required']
     },
     work:{
@@ -27,6 +25,4 @@ let workVersionSchema=new Schema({
     }
 })
 
-workVersionSchema.plugin(uniqueValidator,{message:'{PATH} has to be unique'});
-
-module.exports=mongoose.model('WorkVersion', workVersionSchema);
+module.exports=mongoose.model('WorkVersion', workVersionSchema)

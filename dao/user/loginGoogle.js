@@ -55,7 +55,7 @@ let googleLogin= async (req,res)=>{
             user.nick_name=googleUser.name
             user.email=googleUser.email
             user.signed_google=true
-            user.profile_img=googleUser.img
+            user.profile_img_url=googleUser.img
             user.password='google'
 
             user.save((err,userDB)=>{
@@ -66,7 +66,7 @@ let googleLogin= async (req,res)=>{
 
                 sendCookie(res,'jwt',token)
 
-                custom_response_user(res,"Usuario logueado con éxito",userDB)
+                custom_response_user(res,"Usuario creado y logueado con éxito",userDB)
             })
         }
     })

@@ -25,7 +25,7 @@ let userSchema=new Schema({
         type: String,
         required:[true,'Password is required']
     },
-    profile_img:{
+    profile_img_url:{
         type: String
     },
     followers:[{
@@ -65,6 +65,6 @@ userSchema.pre('deleteOne',function(next){
 
 })
 
-userSchema.plugin(uniqueValidator,{message:'{PATH} has to be unique'})
+userSchema.plugin(uniqueValidator,{message:'{PATH} tiene que ser único'})
 
 module.exports=mongoose.model('User',userSchema)
