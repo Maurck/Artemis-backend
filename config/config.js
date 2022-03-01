@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 process.env.PORT=process.env.PORT || 3000
-process.env.MONGO_URL= 'mongodb+srv://Mauricio:1234@clusterartemis.ofy5d.mongodb.net/Artemis?retryWrites=true&w=majority'
+process.env.MONGO_URL= 'mongodb+srv://Mauricio:1234@artemis2.cqjms.mongodb.net/Artemis2?retryWrites=true&w=majority'
 process.env.NODE_ENV=process.env.NODE_ENV || 'dev'
 
 process.env.SEED='dev-seed'

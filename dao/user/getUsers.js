@@ -15,7 +15,7 @@ let getUsers=(req,res)=>{
     from = Number(from)
 
     let limit =req.query.limit || 0
-    limit=Number(limit)
+    limit = Number(limit)
 
     User.find({})
         .skip(from)
